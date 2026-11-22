@@ -1,24 +1,37 @@
-<div align="center">
+# 🎯 InterviewLoop AI — Enterprise Recruitment Intelligence Platform
 
-# InterviewLoop AI
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.11%2B-3776AB?logo=python&logoColor=white" alt="Python 3.11+">
+  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?logo=fastapi&logoColor=white" alt="FastAPI">
+  <img src="https://img.shields.io/badge/LangGraph-Multi--Agent_Workflows-1C3C3C" alt="LangGraph">
+  <img src="https://img.shields.io/badge/OpenAI-Optional_AI-412991?logo=openai&logoColor=white" alt="OpenAI">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" alt="React 19">
+  <img src="https://img.shields.io/badge/MediaPipe-Vision-00897B" alt="MediaPipe">
+  <img src="https://img.shields.io/badge/SQLite-Default_Database-003B57?logo=sqlite&logoColor=white" alt="SQLite">
+  <img src="https://img.shields.io/badge/No_Docker-Required-00BFA5" alt="No Docker">
+  <img src="https://img.shields.io/badge/Status-Advanced_Reference_App-667EEA" alt="Reference application">
+</p>
 
-### Enterprise Recruitment Intelligence Platform
+<p align="center"><strong>Recruit intelligently. Review transparently. Decide with humans.</strong></p>
 
-**From a job opening to a human-reviewed hiring decision — in one connected workspace.**
+<p align="center">
+  <a href="#-overview">Overview</a> ·
+  <a href="#-features">Features</a> ·
+  <a href="#-ai--computer-vision">AI & Vision</a> ·
+  <a href="#-system-architecture">Architecture</a> ·
+  <a href="#-installation">Installation</a> ·
+  <a href="#-api-reference">API</a> ·
+  <a href="#-security-privacy--responsible-ai">Security</a>
+</p>
 
-An end-to-end, AI-assisted recruitment application combining intelligent CV evidence review, structured video interviews, optional real-time voice AI, browser-based computer vision guidance, live coding assessments, human approval checkpoints, and a premium glassmorphism interface.
+**InterviewLoop AI** is a local-first, full-stack recruitment workspace connecting **recruiters, candidates, AI-assisted evidence review, human approval checkpoints, video interviews, coding assessments, and offer decisions** in a modern dark glassmorphism interface.
 
-**`React 19` · `FastAPI` · `LangGraph` · `OpenAI` · `MediaPipe` · `SQLAlchemy` · `SQLite / PostgreSQL`**
-
-**Local-first · Recruiter-led · Privacy-aware · No Docker required**
-
-[Explore Features](#-platform-capabilities) · [Architecture](#-system-architecture) · [Run Locally](#-getting-started) · [Demo Workflow](#-end-to-end-demo-workflow) · [Security](#-security-privacy--responsible-ai)
-
-</div>
+> [!IMPORTANT]
+> InterviewLoop AI is an **advanced engineering reference application**, not a certified production ATS or autonomous hiring tool. AI outputs support review; they do not make hiring decisions. Use synthetic data in public demos and complete appropriate security, accessibility, and legal reviews before onboarding real candidates.
 
 ---
 
-## Overview
+## 📌 Overview
 
 **InterviewLoop AI** is a full-stack recruitment workflow reference application designed to connect the people, documents, interviews, technical evaluations, and decisions involved in hiring.
 
@@ -28,7 +41,7 @@ Instead of letting an AI model make employment decisions, InterviewLoop uses **L
 
 > **Project status:** This repository is a working, local-first **advanced reference application and engineering portfolio project**, not a certified production applicant-tracking system. Core workflows have been exercised with synthetic local test data. External providers, cross-device behavior, security controls, and deployment readiness require further validation before handling real candidates.
 
-### Guiding principles
+### 🎯 Engineering Goals
 
 - **Evidence over opaque scores:** Make source excerpts, transcripts, test outputs, and reviewer notes inspectable.
 - **Human decisions stay human:** No AI auto-hiring or auto-rejection.
@@ -38,9 +51,9 @@ Instead of letting an AI model make employment decisions, InterviewLoop uses **L
 
 ---
 
-## Platform Capabilities
+## ✨ Features
 
-### Recruiter workspace
+### 🧑‍💼 Recruiter Workspace
 
 | Module | Capabilities |
 | --- | --- |
@@ -55,7 +68,7 @@ Instead of letting an AI model make employment decisions, InterviewLoop uses **L
 | **Organizations & collaboration** | Company workspaces, recruiter invitation codes, workspace switching, and team notes. |
 | **Reports & analytics** | Funnel insights, activity records, notifications, audit logs, and downloadable PDF evidence reports. |
 
-### Candidate experience
+### 👩‍💻 Candidate Experience
 
 | Module | Capabilities |
 | --- | --- |
@@ -69,7 +82,7 @@ Instead of letting an AI model make employment decisions, InterviewLoop uses **L
 | **Offers & notifications** | Receive in-app updates and accept or decline a recorded offer. |
 | **Privacy center** | Access supported application-data export and deletion controls. |
 
-### Connected hiring journey
+### 🔄 End-to-End Recruitment Journey
 
 ```text
 JOB POSTED
@@ -113,9 +126,9 @@ Recruiters can stop or decline an application at authorized review stages; this 
 
 ---
 
-## AI & Computer Vision
+## 🤖 AI & Computer Vision
 
-### 1. AI-supported CV review
+### 📄 1 / AI-Supported CV Evidence Review
 
 CV analysis extracts text and maps **documented evidence** to explicit job requirements. Results can include evidence snippets, missing or unverified information, and questions for a reviewer to investigate.
 
@@ -127,13 +140,13 @@ CV analysis extracts text and maps **documented evidence** to explicit job requi
 
 **Important:** A skills mention is not independent proof of competence. Reports are supporting evidence, not hiring recommendations or automated rankings.
 
-### 2. Structured AI-assisted video interviews
+### 🎙️ 2 / Structured AI Video & Voice Interviews
 
 The candidate studio provides a set of job-relevant interview questions, browser-based recording, protected uploads, recorded-response review, and transcripts. Interview evidence can be assembled into a recruiter-facing report; the recruiter decides whether the application advances.
 
 An optional **OpenAI Realtime WebRTC** experience can deliver spoken interaction and live text events. It requires a working browser microphone, provider access, an OpenAI API key, and explicit candidate participation. The basic recorded-question workflow works without a real-time voice connection.
 
-### 3. Vision Plus 3.1 — private, on-device camera guidance
+### 👁️ 3 / Vision Plus 3.1 — On-Device Eye & Face Guidance
 
 The browser-side vision module uses **MediaPipe Face Landmarker** and its facial/iris landmarks to offer approximate camera-facing feedback during an interview.
 
@@ -152,7 +165,7 @@ The browser-side vision module uses **MediaPipe Face Landmarker** and its facial
 
 This is **not eye-contact verification**. MediaPipe cannot reliably determine a person's actual gaze target or intent. Camera position, lighting, glasses, accessibility needs, reading on-screen prompts, and ordinary eye or head movement can produce false alerts. The system does **not** infer emotions, dishonesty, cheating, attention, identity, or employment suitability from vision signals.
 
-### 4. Technical coding assessments
+### 💻 4 / Technical Coding Assessments
 
 Recruiters can attach a coding challenge to a draft position. Candidates work in the Monaco-based editor and submit code for review.
 
@@ -164,7 +177,7 @@ Recruiters can attach a coding challenge to a draft position. Candidates work in
 
 ---
 
-## System Architecture
+## 🏗️ System Architecture
 
 ```mermaid
 flowchart TB
@@ -211,7 +224,7 @@ flowchart TB
     CP -. Live Interview .-> JITSI[Jitsi / External Meeting]
 ```
 
-### LangGraph orchestration
+### 🧠 LangGraph Subgraphs & Human-in-the-Loop
 
 The source implements **five specialized compiled subgraphs**:
 
@@ -223,7 +236,7 @@ The source implements **five specialized compiled subgraphs**:
 
 The parent workflows use persistent checkpoints and LangGraph human interrupts (`interrupt()` / `Command(resume=...)`) around **CV review, video review, and coding review**. Authorized recruiter actions resume the relevant workflow. A model-generated output cannot independently issue a final hiring decision.
 
-### Technology stack
+### 🛠️ Tech Stack
 
 | Layer | Technology |
 | --- | --- |
@@ -241,7 +254,7 @@ The parent workflows use persistent checkpoints and LangGraph human interrupts (
 | Live interviews | Jitsi or configured external meeting provider |
 | Optional services | Judge0-compatible remote executor, SMTP email |
 
-### Repository layout
+## 📁 Project Structure
 
 ```text
 InterviewLoop-AI-Enterprise/
@@ -282,7 +295,7 @@ InterviewLoop-AI-Enterprise/
 
 ---
 
-## Getting Started
+## ⚙️ Installation
 
 > **No Docker, Docker Compose, or container runtime required.** Two terminals are enough for local development.
 
@@ -294,7 +307,7 @@ InterviewLoop-AI-Enterprise/
 - Chrome or Edge recommended for camera/microphone testing.
 - Optional: OpenAI API access for LLM analysis and real-time voice; other providers as needed.
 
-### Windows — VS Code / PowerShell
+### 1 / Windows — VS Code & PowerShell
 
 Clone the repository (or open your already extracted project folder):
 
@@ -321,7 +334,7 @@ The launch scripts install their respective dependencies on first run, create lo
 
 > PowerShell execution-policy changes above apply to the current process only. Review the scripts before running them; an organization-enforced policy may still block execution.
 
-### macOS / Linux
+### 2 / macOS & Linux
 
 **Terminal 1 — backend:**
 
@@ -337,7 +350,7 @@ The launch scripts install their respective dependencies on first run, create lo
 
 Run these commands from the project root. On macOS/Linux you may need to mark the scripts executable (`chmod +x scripts/*.sh`).
 
-### Local URLs
+### 3 / Local Endpoints
 
 | Service | URL |
 | --- | --- |
@@ -347,7 +360,7 @@ Run these commands from the project root. On macOS/Linux you may need to mark th
 
 Keep both terminals running. Stop either process with `Ctrl+C`. Browser camera and microphone access require **localhost or a secure HTTPS origin**.
 
-### Configure the backend
+### 4 / Backend Environment Variables
 
 Edit **`backend/.env`** (not `.env.example`) after the first launch:
 
@@ -371,7 +384,7 @@ Copy the printed secret into `SECRET_KEY`, then **restart the backend**. Never e
 
 ---
 
-## Optional Service Configuration
+## 🔌 Optional AI & Provider Integrations
 
 | Service | Configuration | What changes |
 | --- | --- | --- |
@@ -391,7 +404,38 @@ Copy the printed secret into `SECRET_KEY`, then **restart the backend**. Never e
 
 ---
 
-## End-to-End Demo Workflow
+## 🌐 API Reference
+
+The backend exposes interactive FastAPI/OpenAPI documentation at **[`http://127.0.0.1:8000/docs`](http://127.0.0.1:8000/docs)**. The endpoints below are selected examples from the project; access depends on role and application state.
+
+| Method | Endpoint | Purpose |
+| --- | --- | --- |
+| `GET` | `/api/health` | Basic backend health check |
+| `POST` | `/api/auth/register` | Register a recruiter or candidate |
+| `POST` | `/api/auth/login` | Authenticate and obtain a session token |
+| `GET` | `/api/jobs` | List accessible job openings |
+| `POST` | `/api/jobs` | Create a draft job (recruiter) |
+| `POST` | `/api/jobs/{jid}/publish` | Publish a job posting |
+| `POST` | `/api/jobs/{jid}/apply` | Submit candidate application and CV |
+| `GET` | `/api/applications/{aid}` | View an authorized application |
+| `POST` | `/api/applications/{aid}/review-cv` | Record recruiter CV decision |
+| `POST` | `/api/applications/{aid}/video-complete` | Complete structured video answers |
+| `POST` | `/api/applications/{aid}/review-video` | Record recruiter interview review |
+| `POST` | `/api/applications/{aid}/coding/submit` | Submit coding assignment |
+| `POST` | `/api/applications/{aid}/coding/review` | Record human code-review outcome |
+| `POST` | `/api/applications/{aid}/schedule` | Schedule individual interview |
+| `GET` | `/api/applications/{aid}/calendar.ics` | Download calendar invitation |
+| `GET` | `/api/applications/{aid}/report` | Download evidence PDF |
+| `POST` | `/api/applications/{aid}/final-decision` | Record final human decision |
+| `POST` | `/api/applications/{aid}/offer-response` | Candidate offer response |
+| `GET` | `/api/analytics` | Tenant-scoped recruitment analytics |
+| `GET` | `/api/privacy/export` | Export supported candidate data |
+
+> Request and response schemas, authentication rules, and complete route lists are defined by the running server's Swagger UI. Do not assume these are public or unauthenticated APIs.
+
+---
+
+## 🧭 Example Recruitment Workflow
 
 Use **synthetic data and test accounts only** when demonstrating the platform publicly.
 
@@ -423,7 +467,7 @@ See `backend/scripts/seed_demo.py` for the local-only sample accounts. Do not en
 
 ---
 
-## Testing & Verification
+## 🧪 Testing & Verification
 
 After installing dependencies, run the automated checks in separate terminals.
 
@@ -456,11 +500,11 @@ These checks complement, but do not replace, manually validating role authorizat
 
 ---
 
-## Security, Privacy & Responsible AI
+## 🔐 Security, Privacy & Responsible AI
 
 InterviewLoop is designed around **explainable evidence and recruiter accountability**, not automated people assessment.
 
-### Built-in development foundations
+### Built-in Development Foundations
 
 - JWT-based authentication, Argon2 password hashing, and role-aware routes.
 - Workspace-scoped application access and human approval endpoints.
@@ -469,7 +513,7 @@ InterviewLoop is designed around **explainable evidence and recruiter accountabi
 - Local-only computer-vision landmarks and gaze proxies (no gaze telemetry sent to recruiters).
 - No in-process execution of untrusted candidate source code.
 
-### Before using real applicant data
+### Before Handling Real Applicant Data
 
 A real deployment requires independent security and legal review, including:
 
@@ -485,7 +529,7 @@ For a more complete discussion, see [Security Notes](docs/SECURITY.md) and the [
 
 ---
 
-## Roadmap
+## 🚀 Roadmap
 
 The roadmap describes **future work**, not completed features.
 
@@ -500,15 +544,7 @@ The roadmap describes **future work**, not completed features.
 
 ---
 
-## Visual Showcase
-
-**Screenshots and the recorded computer-vision demo will be added in a future README update.** This version intentionally includes no image or video references, so the project page stays clean without broken links.
-
-Planned showcase: **Recruiter Dashboard · Candidate Dashboard · ATS Pipeline · CV Evidence Review · Coding Studio · Individual Interview · Vision Plus Demo Video**.
-
----
-
-## Further Documentation
+## 📚 Documentation & References
 
 - [System Architecture](docs/ARCHITECTURE.md)
 - [Feature Matrix](docs/FEATURE-MATRIX.md)
@@ -516,13 +552,34 @@ Planned showcase: **Recruiter Dashboard · Candidate Dashboard · ATS Pipeline �
 - [Vision Module Details](FEATURES-VISION.md)
 - [Vision Plus 3.1 Upgrade Notes](VISION-PLUS-UPDATE.md)
 
-## Author & Repository
 
-Developed as an AI engineering portfolio project by **[Sudeera Attanayake](https://github.com/sudeeraattanayake)**.
+### External Documentation
 
-**Repository:** [github.com/sudeeraattanayake/InterviewLoop-AI-Enterprise](https://github.com/sudeeraattanayake/InterviewLoop-AI-Enterprise)
+- [LangGraph — Graphs and human-in-the-loop workflows](https://docs.langchain.com/oss/python/langgraph/overview)
+- [FastAPI Documentation](https://fastapi.tiangolo.com/)
+- [OpenAI API Documentation](https://platform.openai.com/docs/overview)
+- [MediaPipe Face Landmarker](https://ai.google.dev/edge/mediapipe/solutions/vision/face_landmarker)
+- [React Documentation](https://react.dev/)
+- [Vite](https://vite.dev/)
 
-## Licensing
+---
+
+## 👨‍💻 Author
+
+**Sudeera Attanayake** — AI Engineering · Agentic AI · Full-Stack AI Applications
+
+- **GitHub:** [@sudeeraattanayake](https://github.com/sudeeraattanayake)
+- **LinkedIn:** [Sudeera Attanayake](https://www.linkedin.com/in/sudeera-attanayake-9631b03b0)
+- **Repository:** [InterviewLoop-AI-Enterprise](https://github.com/sudeeraattanayake/InterviewLoop-AI-Enterprise)
+
+
+## 🤝 Contributing & Feedback
+
+Issues, improvement suggestions, and pull requests are welcome. Before contributing, avoid uploading real applicant records, private recordings, tokens, or model-provider credentials. Security-sensitive disclosures should be shared privately rather than posted as public issues.
+
+---
+
+## 📃 License
 
 No explicit open-source license is included in the current project source. **Do not assume MIT/Apache licensing or unrestricted reuse.** Add a `LICENSE` file if and when you choose the terms under which others may use, modify, or distribute the software.
 
@@ -530,7 +587,7 @@ No explicit open-source license is included in the current project source. **Do 
 
 <div align="center">
 
-**InterviewLoop AI — Intelligent workflows. Verifiable evidence. Human decisions.**
+**🎯 InterviewLoop AI — Intelligent workflows. Verifiable evidence. Human decisions.**
 
 *Built for exploring the engineering of responsible, end-to-end recruitment systems.*
 
