@@ -1,0 +1,11 @@
+import React,{useEffect,useState} from 'react'
+import {Activity,CalendarClock,CheckCircle2,FileText,LockKeyhole,ShieldCheck,Workflow} from 'lucide-react'
+import {api} from '../api'
+import {Badge,Busy,Empty,PageHead,dateLabel,timeLabel} from '../components/ui'
+export default function ActivityPage(){const [items,setItems]=useState([]),[loading,setLoading]=useState(true)
+ useEffect(()=>{api('/audit').then(setItems).finally(()=>setLoading(false))},[])
+ const labels={job_created:'Position created',job_edited:'Draft updated',job_published:'Position published',job_closed:'Position closed',application_submitted:'New application',cv_evidence_ready:'CV analysis complete',human_cv_decision:'Recruiter reviewed CV',video_consent_changed:'Interview consent updated',video_answer_recorded:'Video answer submitted',video_completed:'Video interview complete',human_video_decision:'Recruiter reviewed interview',individual_scheduled:'Interview scheduled',human_final_decision:'Final hiring decision'}
+ return <><PageHead eyebrow="GOVERNANCE / ACTIVITY" title={<>Audit <span className="gradient-text">trail</span></>} desc="A traceable record of recruiter decisions and workflow transitions."/>
+ <div className="notice info"><ShieldCheck size={18}/> Events are recorded with timestamps and actor IDs. This is a local operational audit, not tamper-proof compliance storage.</div>
+ {loading?<Busy/>:items.length?<div className="card glass"><div className="card-title-row"><div><span className="eyebrow">RECENT ACTIVITY</span><h3>Workflow event history</h3></div><Badge color="cyan">{items.length} events</Badge></div><div className="event-list">{items.map(e=><div className="event-item" key={e.id}><span className="event-icon"><Activity size={19}/></span><div><h4>{labels[e.event]||e.event.replaceAll('_',' ')}</h4><p>Actor #{e.actor_id||'system'} · {e.application_id?`Application #${e.application_id}`:`Position #${e.job_id||'—'}`}</p>{e.details?.decision&&<Badge color="purple">{e.details.decision}</Badge>}</div><span>{timeLabel(e.created_at)}</span></div>)}</div></div>:<Empty icon={Activity} title="No events recorded" desc="Workflow events will appear here as you create positions and review candidates."/>}</>
+}
